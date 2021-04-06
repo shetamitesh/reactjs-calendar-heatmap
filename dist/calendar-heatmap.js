@@ -496,7 +496,7 @@ var CalendarHeatmap = function (_React$Component) {
 
         // Construct tooltip
         var tooltip_html = '';
-        tooltip_html += '<div><span><strong>Total time found:</strong></span>';
+        tooltip_html += '<div><span><strong>Total trades found:</strong></span>';
 
         var sec = parseInt(d.total, 10);
         var days = Math.floor(sec / 86400);
@@ -741,7 +741,7 @@ var CalendarHeatmap = function (_React$Component) {
 
         // Construct tooltip
         var tooltip_html = '';
-        tooltip_html += '<div class="' + _calendarHeatmap2.default.header + '"><strong>' + (d.total ? _this3.formatTime(d.total) : 'No time') + ' found</strong></div>';
+        tooltip_html += '<div class="' + _calendarHeatmap2.default.header + '"><strong>' + (d.total ? _this3.formatTime(d.total) : 'No trade') + ' found</strong></div>';
         tooltip_html += '<div>on ' + (0, _moment2.default)(d.date).format('dddd, MMM Do YYYY') + '</div><br>';
 
         // Add summary to the tooltip
@@ -1002,7 +1002,7 @@ var CalendarHeatmap = function (_React$Component) {
         // Construct tooltip
         var tooltip_html = '';
         tooltip_html += '<div class="' + _calendarHeatmap2.default.header + '"><strong>' + d.name + '</strong></div><br>';
-        tooltip_html += '<div><strong>' + (d.value ? _this4.formatTime(d.value) : 'No time') + ' found</strong></div>';
+        tooltip_html += '<div><strong>' + (d.value ? _this4.formatTime(d.value) : 'No trade') + ' found</strong></div>';
         tooltip_html += '<div>on ' + (0, _moment2.default)(date).format('dddd, MMM Do YYYY') + '</div>';
 
         // Calculate tooltip position
@@ -1232,7 +1232,7 @@ var CalendarHeatmap = function (_React$Component) {
         // Construct tooltip
         var tooltip_html = '';
         tooltip_html += '<div class="' + _calendarHeatmap2.default.header + '"><strong>' + d.name + '</strong></div><br>';
-        tooltip_html += '<div><strong>' + (d.value ? _this5.formatTime(d.value) : 'No time') + ' found</strong></div>';
+        tooltip_html += '<div><strong>' + (d.value ? _this5.formatTime(d.value) : 'No trade') + ' found</strong></div>';
         tooltip_html += '<div>on ' + (0, _moment2.default)(date).format('dddd, MMM Do YYYY') + '</div>';
 
         // Calculate tooltip position
@@ -1369,7 +1369,7 @@ var CalendarHeatmap = function (_React$Component) {
         // Construct tooltip
         var tooltip_html = '';
         tooltip_html += '<div class="' + _calendarHeatmap2.default.header + '"><strong>' + d.name + '</strong><div><br>';
-        tooltip_html += '<div><strong>' + (d.value ? _this6.formatTime(d.value) : 'No time') + ' found</strong></div>';
+        tooltip_html += '<div><strong>' + (d.value ? _this6.formatTime(d.value) : 'No trade') + ' found</strong></div>';
         tooltip_html += '<div>on ' + (0, _moment2.default)(d.date).format('dddd, MMM Do YYYY HH:mm') + '</div>';
 
         // Calculate tooltip position
@@ -1625,18 +1625,18 @@ var CalendarHeatmap = function (_React$Component) {
   }, {
     key: 'formatTime',
     value: function formatTime(seconds) {
-      // var hours = Math.floor(seconds / 3600);
-      // var minutes = Math.floor((seconds - hours * 3600) / 60);
-      var time = Math.round(seconds) + ' trades';
-      // if (hours > 0) {
-      //   time += hours === 1 ? '1 hour ' : hours + ' hours ';
-      // }
-      // if (minutes > 0) {
-      //   time += minutes === 1 ? '1 minute' : minutes + ' minutes';
-      // }
-      // if (hours === 0 && minutes === 0) {
-      //   time = Math.round(seconds) + ' seconds';
-      // }
+      var hours = Math.floor(seconds / 3600);
+      var minutes = Math.floor((seconds - hours * 3600) / 60);
+      var time = '';
+      if (hours > 0) {
+        time += hours === 1 ? '1 hour ' : hours + ' hours ';
+      }
+      if (minutes > 0) {
+        time += minutes === 1 ? '1 minute' : minutes + ' minutes';
+      }
+      if (hours === 0 && minutes === 0) {
+        time = Math.round(seconds) + ' seconds';
+      }
       return time;
     }
   }, {
