@@ -247,7 +247,7 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all global overview related items and labels
-        this.removeGlobalOverview()
+        //this.removeGlobalOverview()
 
         // Redraw the chart
         //this.overview = 'year'
@@ -409,7 +409,7 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all global overview related items and labels
-        this.removeGlobalOverview()
+        //this.removeGlobalOverview()
 
         // Redraw the chart
         //this.overview = 'year'
@@ -505,7 +505,7 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all year overview related items and labels
-        this.removeYearOverview()
+        //this.removeYearOverview()
 
         // Redraw the chart
         //this.overview = 'day'
@@ -688,7 +688,7 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all year overview related items and labels
-        this.removeYearOverview()
+        //this.removeYearOverview()
 
         // Redraw the chart
         //this.overview = 'month'
@@ -830,7 +830,7 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all month overview related items and labels
-        this.removeMonthOverview()
+        //this.removeMonthOverview()
 
         // Redraw the chart
         //this.overview = 'day'
@@ -987,7 +987,7 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all year overview related items and labels
-        this.removeMonthOverview()
+        //this.removeMonthOverview()
 
         // Redraw the chart
         //this.overview = 'week'
@@ -1120,7 +1120,7 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all week overview related items and labels
-        this.removeWeekOverview()
+        //this.removeWeekOverview()
 
         // Redraw the chart
         //this.overview = 'day'
