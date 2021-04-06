@@ -505,11 +505,11 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all year overview related items and labels
-        this.removeYearOverview()
+        //this.removeYearOverview()
 
         // Redraw the chart
-        this.overview = 'day'
-        this.drawChart()
+        //this.overview = 'day'
+        //this.drawChart()
       })
       .on('mouseover', d => {
         if (this.in_transition) { return }
