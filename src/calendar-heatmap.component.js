@@ -879,7 +879,7 @@ class CalendarHeatmap extends React.Component {
 
         // Construct tooltip
         let tooltip_html = ''
-        tooltip_html += `<div class="${styles.header}"><strong>${d.name}</strong></div><br>`
+        tooltip_html += `<div class=".header"><strong>${d.name}</strong></div><br>`
         tooltip_html += '<div><strong>' + (d.value ? this.formatTime(d.value) : 'No trade') + ' found</strong></div>'
         tooltip_html += '<div>on ' + moment(date).format('dddd, MMM Do YYYY') + '</div>'
 
@@ -1698,7 +1698,7 @@ class CalendarHeatmap extends React.Component {
   formatTime(seconds) {
     // let hours = Math.floor(seconds / 3600)
     // let minutes = Math.floor((seconds - (hours * 3600)) / 60)
-    let time = Math.round(seconds) + ' trdes'
+    let time = Math.round(seconds) + ' trades'
     // if (hours > 0) {
     //   time += hours === 1 ? '1 hour ' : hours + ' hours '
     // }
