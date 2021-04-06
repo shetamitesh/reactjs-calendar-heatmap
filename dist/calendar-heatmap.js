@@ -1010,7 +1010,7 @@ var CalendarHeatmap = function (_React$Component) {
         while (_this4.settings.width - x < _this4.settings.tooltip_width + _this4.settings.tooltip_padding * 3) {
           x -= 10;
         }
-        var y = dayScale((0, _moment2.default)(date).weekday()) + _this4.settings.tooltip_padding * 2;
+        var y = dayScale((0, _moment2.default)(date).weekday()) + _this4.settings.tooltip_padding * 2 + 100;
 
         // Show tooltip
         _this4.tooltip.html(tooltip_html).style('left', x + 'px').style('top', y + 'px').transition().duration(_this4.settings.transition_duration / 2).ease(d3.easeLinear).style('opacity', 1);

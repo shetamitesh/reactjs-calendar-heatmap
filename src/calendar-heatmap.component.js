@@ -888,7 +888,7 @@ class CalendarHeatmap extends React.Component {
         while (this.settings.width - x < (this.settings.tooltip_width + this.settings.tooltip_padding * 3)) {
           x -= 10
         }
-        let y = dayScale(moment(date).weekday()) + this.settings.tooltip_padding * 2
+        let y = (dayScale(moment(date).weekday()) + this.settings.tooltip_padding * 2) + 100
 
         // Show tooltip
         this.tooltip.html(tooltip_html)
