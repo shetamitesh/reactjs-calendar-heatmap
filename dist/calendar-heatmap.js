@@ -484,11 +484,11 @@ var CalendarHeatmap = function (_React$Component) {
         _this2.hideTooltip();
 
         // Remove all global overview related items and labels
-        //this.removeGlobalOverview()
+        _this2.removeGlobalOverview();
 
         // Redraw the chart
-        //this.overview = 'year'
-        //this.drawChart()
+        _this2.overview = 'year';
+        _this2.drawChart();
       }).style('opacity', 0).on('mouseover', function (d) {
         if (_this2.in_transition) {
           return;
@@ -620,11 +620,11 @@ var CalendarHeatmap = function (_React$Component) {
         };_this2.hideTooltip();
 
         // Remove all global overview related items and labels
-        //this.removeGlobalOverview()
+        _this2.removeGlobalOverview();
 
         // Redraw the chart
-        //this.overview = 'year'
-        //this.drawChart()
+        _this2.overview = 'year';
+        _this2.drawChart();
       });
     }
 
@@ -710,11 +710,11 @@ var CalendarHeatmap = function (_React$Component) {
         _this3.hideTooltip();
 
         // Remove all year overview related items and labels
-        //this.removeYearOverview()
+        _this3.removeYearOverview();
 
         // Redraw the chart
-        //this.overview = 'day'
-        //this.drawChart()
+        _this3.overview = 'day';
+        _this3.drawChart();
       }).on('mouseover', function (d) {
         if (_this3.in_transition) {
           return;
@@ -848,11 +848,11 @@ var CalendarHeatmap = function (_React$Component) {
         _this3.hideTooltip();
 
         // Remove all year overview related items and labels
-        //this.removeYearOverview()
+        _this3.removeYearOverview();
 
         // Redraw the chart
-        //this.overview = 'month'
-        //this.drawChart()
+        _this3.overview = 'month';
+        _this3.drawChart();
       });
 
       // Add day labels
@@ -962,11 +962,11 @@ var CalendarHeatmap = function (_React$Component) {
         _this4.hideTooltip();
 
         // Remove all month overview related items and labels
-        //this.removeMonthOverview()
+        _this4.removeMonthOverview();
 
         // Redraw the chart
-        //this.overview = 'day'
-        //this.drawChart()
+        _this4.overview = 'day';
+        _this4.drawChart();
       });
 
       var item_width = (this.settings.width - this.settings.label_padding) / week_labels.length - this.settings.gutter * 5;
@@ -1085,11 +1085,11 @@ var CalendarHeatmap = function (_React$Component) {
         };_this4.hideTooltip();
 
         // Remove all year overview related items and labels
-        //this.removeMonthOverview()
+        _this4.removeMonthOverview();
 
         // Redraw the chart
-        //this.overview = 'week'
-        //this.drawChart()
+        _this4.overview = 'week';
+        _this4.drawChart();
       });
 
       // Add day labels
@@ -1192,11 +1192,11 @@ var CalendarHeatmap = function (_React$Component) {
         _this5.hideTooltip();
 
         // Remove all week overview related items and labels
-        //this.removeWeekOverview()
+        _this5.removeWeekOverview();
 
         // Redraw the chart
-        //this.overview = 'day'
-        //this.drawChart()
+        _this5.overview = 'day';
+        _this5.drawChart();
       });
 
       var item_width = (this.settings.width - this.settings.label_padding) / week_labels.length - this.settings.gutter * 5;

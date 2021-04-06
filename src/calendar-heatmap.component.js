@@ -247,11 +247,11 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all global overview related items and labels
-        //this.removeGlobalOverview()
+        this.removeGlobalOverview()
 
         // Redraw the chart
-        //this.overview = 'year'
-        //this.drawChart()
+        this.overview = 'year'
+        this.drawChart()
       })
       .style('opacity', 0)
       .on('mouseover', d => {
@@ -409,11 +409,11 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all global overview related items and labels
-        //this.removeGlobalOverview()
+        this.removeGlobalOverview()
 
         // Redraw the chart
-        //this.overview = 'year'
-        //this.drawChart()
+        this.overview = 'year'
+        this.drawChart()
       })
   }
 
@@ -505,11 +505,11 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all year overview related items and labels
-        //this.removeYearOverview()
+        this.removeYearOverview()
 
         // Redraw the chart
-        //this.overview = 'day'
-        //this.drawChart()
+        this.overview = 'day'
+        this.drawChart()
       })
       .on('mouseover', d => {
         if (this.in_transition) { return }
@@ -688,11 +688,11 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all year overview related items and labels
-        //this.removeYearOverview()
+        this.removeYearOverview()
 
         // Redraw the chart
-        //this.overview = 'month'
-        //this.drawChart()
+        this.overview = 'month'
+        this.drawChart()
       })
 
     // Add day labels
@@ -830,11 +830,11 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all month overview related items and labels
-        //this.removeMonthOverview()
+        this.removeMonthOverview()
 
         // Redraw the chart
-        //this.overview = 'day'
-        //this.drawChart()
+        this.overview = 'day'
+        this.drawChart()
       })
 
     let item_width = (this.settings.width - this.settings.label_padding) / week_labels.length - this.settings.gutter * 5
@@ -987,11 +987,11 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all year overview related items and labels
-        //this.removeMonthOverview()
+        this.removeMonthOverview()
 
         // Redraw the chart
-        //this.overview = 'week'
-        //this.drawChart()
+        this.overview = 'week'
+        this.drawChart()
       })
 
     // Add day labels
@@ -1120,11 +1120,11 @@ class CalendarHeatmap extends React.Component {
         this.hideTooltip()
 
         // Remove all week overview related items and labels
-        //this.removeWeekOverview()
+        this.removeWeekOverview()
 
         // Redraw the chart
-        //this.overview = 'day'
-        //this.drawChart()
+        this.overview = 'day'
+        this.drawChart()
       })
 
     let item_width = (this.settings.width - this.settings.label_padding) / week_labels.length - this.settings.gutter * 5
