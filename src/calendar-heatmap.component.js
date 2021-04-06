@@ -259,7 +259,7 @@ class CalendarHeatmap extends React.Component {
 
         // Construct tooltip
         let tooltip_html = ''
-        tooltip_html += '<div><span><strong>Total time tracked:</strong></span>'
+        tooltip_html += '<div><span><strong>Total trades found:</strong></span>'
 
         let sec = parseInt(d.total, 10)
         let days = Math.floor(sec / 86400)
@@ -549,7 +549,7 @@ class CalendarHeatmap extends React.Component {
 
         // Construct tooltip
         let tooltip_html = ''
-        tooltip_html += `<div class="${styles.header}"><strong>${d.total ? this.formatTime(d.total) : 'No time'} tracked</strong></div>`
+        tooltip_html += `<div class="${styles.header}"><strong>${d.total ? this.formatTime(d.total) : 'No trade'} found</strong></div>`
         tooltip_html += '<div>on ' + moment(d.date).format('dddd, MMM Do YYYY') + '</div><br>'
 
         // Add summary to the tooltip
@@ -880,7 +880,7 @@ class CalendarHeatmap extends React.Component {
         // Construct tooltip
         let tooltip_html = ''
         tooltip_html += `<div class="${styles.header}"><strong>${d.name}</strong></div><br>`
-        tooltip_html += '<div><strong>' + (d.value ? this.formatTime(d.value) : 'No time') + ' tracked</strong></div>'
+        tooltip_html += '<div><strong>' + (d.value ? this.formatTime(d.value) : 'No trade') + ' found</strong></div>'
         tooltip_html += '<div>on ' + moment(date).format('dddd, MMM Do YYYY') + '</div>'
 
         // Calculate tooltip position
@@ -1170,7 +1170,7 @@ class CalendarHeatmap extends React.Component {
         // Construct tooltip
         let tooltip_html = ''
         tooltip_html += `<div class="${styles.header}"><strong>${d.name}</strong></div><br>`
-        tooltip_html += '<div><strong>' + (d.value ? this.formatTime(d.value) : 'No time') + ' tracked</strong></div>'
+        tooltip_html += '<div><strong>' + (d.value ? this.formatTime(d.value) : 'No trade') + ' found</strong></div>'
         tooltip_html += '<div>on ' + moment(date).format('dddd, MMM Do YYYY') + '</div>'
 
         // Calculate tooltip position
@@ -1361,7 +1361,7 @@ class CalendarHeatmap extends React.Component {
         // Construct tooltip
         let tooltip_html = ''
         tooltip_html += `<div class="${styles.header}"><strong>${d.name}</strong><div><br>`
-        tooltip_html += '<div><strong>' + (d.value ? this.formatTime(d.value) : 'No time') + ' tracked</strong></div>'
+        tooltip_html += '<div><strong>' + (d.value ? this.formatTime(d.value) : 'No trade') + ' found</strong></div>'
         tooltip_html += '<div>on ' + moment(d.date).format('dddd, MMM Do YYYY HH:mm') + '</div>'
 
         // Calculate tooltip position
