@@ -322,7 +322,7 @@ class CalendarHeatmap extends React.Component {
         // Show tooltip
         this.tooltip.html(tooltip_html)
           .style('left', x + 'px')
-          .style('top', y + 'px')
+          .style('top', '190px')
           .transition()
           .duration(this.settings.transition_duration / 2)
           .ease(d3.easeLinear)
@@ -570,7 +570,7 @@ class CalendarHeatmap extends React.Component {
         // Show tooltip
         this.tooltip.html(tooltip_html)
           .style('left', x + 'px')
-          .style('top', y + 'px')
+          .style('top', '190px')
           .transition()
           .duration(this.settings.transition_duration / 2)
           .ease(d3.easeLinear)
@@ -893,7 +893,7 @@ class CalendarHeatmap extends React.Component {
         // Show tooltip
         this.tooltip.html(tooltip_html)
           .style('left', x + 'px')
-          .style('top', y + 'px')
+          .style('top', '190px')
           .transition()
           .duration(this.settings.transition_duration / 2)
           .ease(d3.easeLinear)
@@ -1185,7 +1185,7 @@ class CalendarHeatmap extends React.Component {
         // Show tooltip
         this.tooltip.html(tooltip_html)
           .style('left', x + 'px')
-          .style('top', y + 'px')
+          .style('top', '190px')
           .transition()
           .duration(this.settings.transition_duration / 2)
           .ease(d3.easeLinear)
@@ -1374,7 +1374,7 @@ class CalendarHeatmap extends React.Component {
         // Show tooltip
         this.tooltip.html(tooltip_html)
           .style('left', x + 'px')
-          .style('top', y + 'px')
+          .style('top', '190px')
           .transition()
           .duration(this.settings.transition_duration / 2)
           .ease(d3.easeLinear)

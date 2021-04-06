@@ -557,7 +557,7 @@ var CalendarHeatmap = function (_React$Component) {
         var y = _this2.settings.tooltip_padding * 3;
 
         // Show tooltip
-        _this2.tooltip.html(tooltip_html).style('left', x + 'px').style('top', y + 'px').transition().duration(_this2.settings.transition_duration / 2).ease(d3.easeLinear).style('opacity', 1);
+        _this2.tooltip.html(tooltip_html).style('left', x + 'px').style('top', '190px').transition().duration(_this2.settings.transition_duration / 2).ease(d3.easeLinear).style('opacity', 1);
       }).on('mouseout', function () {
         if (_this2.in_transition) {
           return;
@@ -760,7 +760,7 @@ var CalendarHeatmap = function (_React$Component) {
         var y = calcItemY(d) + _this3.settings.item_size;
 
         // Show tooltip
-        _this3.tooltip.html(tooltip_html).style('left', x + 'px').style('top', y + 'px').transition().duration(_this3.settings.transition_duration / 2).ease(d3.easeLinear).style('opacity', 1);
+        _this3.tooltip.html(tooltip_html).style('left', x + 'px').style('top', '190px').transition().duration(_this3.settings.transition_duration / 2).ease(d3.easeLinear).style('opacity', 1);
       }).on('mouseout', function () {
         if (_this3.in_transition) {
           return;
@@ -1013,7 +1013,7 @@ var CalendarHeatmap = function (_React$Component) {
         var y = dayScale((0, _moment2.default)(date).weekday()) + _this4.settings.tooltip_padding * 2 + 100;
 
         // Show tooltip
-        _this4.tooltip.html(tooltip_html).style('left', x + 'px').style('top', y + 'px').transition().duration(_this4.settings.transition_duration / 2).ease(d3.easeLinear).style('opacity', 1);
+        _this4.tooltip.html(tooltip_html).style('left', x + 'px').style('top', '190px').transition().duration(_this4.settings.transition_duration / 2).ease(d3.easeLinear).style('opacity', 1);
       }).on('mouseout', function () {
         if (_this4.in_transition) {
           return;
@@ -1245,7 +1245,7 @@ var CalendarHeatmap = function (_React$Component) {
         var y = dayScale((0, _moment2.default)(date).weekday()) + _this5.settings.tooltip_padding * 1.5;
 
         // Show tooltip
-        _this5.tooltip.html(tooltip_html).style('left', x + 'px').style('top', y + 'px').transition().duration(_this5.settings.transition_duration / 2).ease(d3.easeLinear).style('opacity', 1);
+        _this5.tooltip.html(tooltip_html).style('left', x + 'px').style('top', '190px').transition().duration(_this5.settings.transition_duration / 2).ease(d3.easeLinear).style('opacity', 1);
       }).on('mouseout', function () {
         if (_this5.in_transition) {
           return;
@@ -1380,7 +1380,7 @@ var CalendarHeatmap = function (_React$Component) {
         var y = projectScale(d.name) + projectScale.bandwidth() / 2 + _this6.settings.tooltip_padding / 2;
 
         // Show tooltip
-        _this6.tooltip.html(tooltip_html).style('left', x + 'px').style('top', y + 'px').transition().duration(_this6.settings.transition_duration / 2).ease(d3.easeLinear).style('opacity', 1);
+        _this6.tooltip.html(tooltip_html).style('left', x + 'px').style('top', '190px').transition().duration(_this6.settings.transition_duration / 2).ease(d3.easeLinear).style('opacity', 1);
       }).on('mouseout', function () {
         if (_this6.in_transition) {
           return;
