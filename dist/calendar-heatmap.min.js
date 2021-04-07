@@ -710,11 +710,11 @@ var CalendarHeatmap = function (_React$Component) {
         _this3.hideTooltip();
 
         // Remove all year overview related items and labels
-        //this.removeYearOverview()
+        _this3.removeYearOverview();
 
         // Redraw the chart
-        //this.overview = 'day'
-        //this.drawChart()
+        _this3.overview = 'day';
+        _this3.drawChart();
       }).on('mouseover', function (d) {
         if (_this3.in_transition) {
           return;
