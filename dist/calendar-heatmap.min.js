@@ -848,34 +848,31 @@ var CalendarHeatmap = function (_React$Component) {
 
         _this3.items.selectAll('.item-circle').transition().duration(_this3.settings.transition_duration).ease(d3.easeLinear).style('opacity', 1);
       }).on('click', function (d) {
-        if (_this3.in_transition) {
-          return;
-        }
+        // if (this.in_transition) { return }
 
-        // Check month data
-        var month_data = _this3.props.data.filter(function (e) {
-          return (0, _moment2.default)(d).startOf('month') <= (0, _moment2.default)(e.date) && (0, _moment2.default)(e.date) < (0, _moment2.default)(d).endOf('month');
-        });
+        // // Check month data
+        // let month_data = this.props.data.filter(e => {
+        //   return moment(d).startOf('month') <= moment(e.date) && moment(e.date) < moment(d).endOf('month')
+        // })
 
-        // Don't transition if there is no data to show
-        if (!month_data.length) {
-          return;
-        }
+        // // Don't transition if there is no data to show
+        // if (!month_data.length) { return }
 
-        // Set selected month to the one clicked on
-        _this3.selected = { date: d };
+        // // Set selected month to the one clicked on
+        // this.selected = { date: d }
 
-        _this3.in_transition = true;
+        // this.in_transition = true
 
-        // Hide tooltip
-        _this3.hideTooltip();
+        // // Hide tooltip
+        // this.hideTooltip()
 
-        // Remove all year overview related items and labels
-        _this3.removeYearOverview();
+        // // Remove all year overview related items and labels
+        // this.removeYearOverview()
 
-        // Redraw the chart
-        _this3.overview = 'month';
-        _this3.drawChart();
+        // // Redraw the chart
+        // this.overview = 'month'
+        // this.drawChart()
+        return;
       });
 
       // Add day labels

@@ -698,30 +698,31 @@ class CalendarHeatmap extends React.Component {
           .style('opacity', 1)
       })
       .on('click', d => {
-        if (this.in_transition) { return }
+        // if (this.in_transition) { return }
 
-        // Check month data
-        let month_data = this.props.data.filter(e => {
-          return moment(d).startOf('month') <= moment(e.date) && moment(e.date) < moment(d).endOf('month')
-        })
+        // // Check month data
+        // let month_data = this.props.data.filter(e => {
+        //   return moment(d).startOf('month') <= moment(e.date) && moment(e.date) < moment(d).endOf('month')
+        // })
 
-        // Don't transition if there is no data to show
-        if (!month_data.length) { return }
+        // // Don't transition if there is no data to show
+        // if (!month_data.length) { return }
 
-        // Set selected month to the one clicked on
-        this.selected = { date: d }
+        // // Set selected month to the one clicked on
+        // this.selected = { date: d }
 
-        this.in_transition = true
+        // this.in_transition = true
 
-        // Hide tooltip
-        this.hideTooltip()
+        // // Hide tooltip
+        // this.hideTooltip()
 
-        // Remove all year overview related items and labels
-        this.removeYearOverview()
+        // // Remove all year overview related items and labels
+        // this.removeYearOverview()
 
-        // Redraw the chart
-        this.overview = 'month'
-        this.drawChart()
+        // // Redraw the chart
+        // this.overview = 'month'
+        // this.drawChart()
+        return
       })
 
     // Add day labels
