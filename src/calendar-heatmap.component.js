@@ -41,7 +41,7 @@ class CalendarHeatmap extends React.Component {
 
   componentDidUpdate() {
     this.parseData()
-    this.drawChart()
+    //this.drawChart()
   }
 
   componentWillUnmount() {
@@ -92,7 +92,7 @@ class CalendarHeatmap extends React.Component {
       .attr('height', this.settings.height)
 
     if (!!this.props.data && !!this.props.data[0].summary) {
-      this.drawChart()
+      //this.drawChart()
     }
   }
 
@@ -251,7 +251,7 @@ class CalendarHeatmap extends React.Component {
 
         // Redraw the chart
         this.overview = 'year'
-        this.drawChart()
+        //this.drawChart()
       })
       .style('opacity', 0)
       .on('mouseover', d => {
@@ -413,7 +413,7 @@ class CalendarHeatmap extends React.Component {
 
         // Redraw the chart
         this.overview = 'year'
-        this.drawChart()
+        //this.drawChart()
       })
   }
 
@@ -504,7 +504,7 @@ class CalendarHeatmap extends React.Component {
         //this.in_transition = true
 
         // Set selected date to the one clicked on
-        //this.selected = d
+        this.selected = d
 
         d3.select(d3.event.currentTarget).transition()
           .duration(this.settings.transition_duration / 2)
@@ -864,7 +864,7 @@ class CalendarHeatmap extends React.Component {
 
         // Redraw the chart
         this.overview = 'day'
-        this.drawChart()
+        //this.drawChart()
       })
 
     let item_width = (this.settings.width - this.settings.label_padding) / week_labels.length - this.settings.gutter * 5
@@ -1021,7 +1021,7 @@ class CalendarHeatmap extends React.Component {
 
         // Redraw the chart
         this.overview = 'week'
-        this.drawChart()
+        //this.drawChart()
       })
 
     // Add day labels
@@ -1154,7 +1154,7 @@ class CalendarHeatmap extends React.Component {
 
         // Redraw the chart
         this.overview = 'day'
-        this.drawChart()
+        //this.drawChart()
       })
 
     let item_width = (this.settings.width - this.settings.label_padding) / week_labels.length - this.settings.gutter * 5
@@ -1584,7 +1584,7 @@ class CalendarHeatmap extends React.Component {
         // Redraw the chart
         this.history.pop()
         this.overview = this.history.pop()
-        this.drawChart()
+        //this.drawChart()
       })
     button.append('circle')
       .attr('cx', this.settings.label_padding / 2.25)

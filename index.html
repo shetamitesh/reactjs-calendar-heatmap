@@ -67,6 +67,7 @@
         render() {
           return (
             <CalendarHeatmap
+selectedYear={{startdate: moment(new Date()).subtract(366, 'days').toDate(), enddate: new Date()}}
               data={this.state.data}
               color={this.state.color}
               overview={this.state.overview}

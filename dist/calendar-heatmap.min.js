@@ -296,7 +296,7 @@ var CalendarHeatmap = function (_React$Component) {
     key: 'componentDidUpdate',
     value: function componentDidUpdate() {
       this.parseData();
-      this.drawChart();
+      //this.drawChart()
     }
   }, {
     key: 'componentWillUnmount',
@@ -335,7 +335,7 @@ var CalendarHeatmap = function (_React$Component) {
       this.svg.attr('width', this.settings.width).attr('height', this.settings.height);
 
       if (!!this.props.data && !!this.props.data[0].summary) {
-        this.drawChart();
+        //this.drawChart()
       }
     }
   }, {
@@ -488,7 +488,7 @@ var CalendarHeatmap = function (_React$Component) {
 
         // Redraw the chart
         _this2.overview = 'year';
-        _this2.drawChart();
+        //this.drawChart()
       }).style('opacity', 0).on('mouseover', function (d) {
         if (_this2.in_transition) {
           return;
@@ -624,7 +624,7 @@ var CalendarHeatmap = function (_React$Component) {
 
         // Redraw the chart
         _this2.overview = 'year';
-        _this2.drawChart();
+        //this.drawChart()
       });
     }
 
@@ -709,7 +709,7 @@ var CalendarHeatmap = function (_React$Component) {
         //this.in_transition = true
 
         // Set selected date to the one clicked on
-        //this.selected = d
+        _this3.selected = d;
 
         d3.select(d3.event.currentTarget).transition().duration(_this3.settings.transition_duration / 2).ease(d3.easeLinear).attr('x', function (d) {
           return calcItemX(d) + (_this3.settings.item_size - calcItemSize(d)) / 2;
@@ -986,7 +986,7 @@ var CalendarHeatmap = function (_React$Component) {
 
         // Redraw the chart
         _this4.overview = 'day';
-        _this4.drawChart();
+        //this.drawChart()
       });
 
       var item_width = (this.settings.width - this.settings.label_padding) / week_labels.length - this.settings.gutter * 5;
@@ -1109,7 +1109,7 @@ var CalendarHeatmap = function (_React$Component) {
 
         // Redraw the chart
         _this4.overview = 'week';
-        _this4.drawChart();
+        //this.drawChart()
       });
 
       // Add day labels
@@ -1216,7 +1216,7 @@ var CalendarHeatmap = function (_React$Component) {
 
         // Redraw the chart
         _this5.overview = 'day';
-        _this5.drawChart();
+        //this.drawChart()
       });
 
       var item_width = (this.settings.width - this.settings.label_padding) / week_labels.length - this.settings.gutter * 5;
@@ -1531,7 +1531,7 @@ var CalendarHeatmap = function (_React$Component) {
         // Redraw the chart
         _this7.history.pop();
         _this7.overview = _this7.history.pop();
-        _this7.drawChart();
+        //this.drawChart()
       });
       button.append('circle').attr('cx', this.settings.label_padding / 2.25).attr('cy', this.settings.label_padding / 2.5).attr('r', this.settings.item_size / 2);
       button.append('text').style('stroke-width', 1).style('text-anchor', 'middle').style('fill', 'rgb(170, 170, 170)').attr('x', this.settings.label_padding / 2.25).attr('y', this.settings.label_padding / 2.5).attr('dy', function () {
