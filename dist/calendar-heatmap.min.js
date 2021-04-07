@@ -643,8 +643,11 @@ var CalendarHeatmap = function (_React$Component) {
       }
 
       // Define start and end date of the selected year
-      var start_of_year = (0, _moment2.default)(this.selected.date).startOf('year');
-      var end_of_year = (0, _moment2.default)(this.selected.date).endOf('year');
+      // let start_of_year = moment(this.selected.date).startOf('year')
+      // let end_of_year = moment(this.selected.date).endOf('year')
+
+      var start_of_year = (0, _moment2.default)(this.props.selectedYear.startdate);
+      var end_of_year = (0, _moment2.default)(this.props.selectedYear.enddate);
 
       // Filter data down to the selected year
       var year_data = this.props.data.filter(function (d) {
