@@ -709,7 +709,7 @@ var CalendarHeatmap = function (_React$Component) {
         //this.in_transition = true
 
         // Set selected date to the one clicked on
-        _this3.selected = d;
+        //this.selected = d
 
         d3.select(d3.event.currentTarget).transition().duration(_this3.settings.transition_duration / 2).ease(d3.easeLinear).attr('x', function (d) {
           return calcItemX(d) + (_this3.settings.item_size - calcItemSize(d)) / 2;

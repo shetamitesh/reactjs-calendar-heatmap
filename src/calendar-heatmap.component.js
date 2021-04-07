@@ -504,7 +504,7 @@ class CalendarHeatmap extends React.Component {
         //this.in_transition = true
 
         // Set selected date to the one clicked on
-        this.selected = d
+        //this.selected = d
 
         d3.select(d3.event.currentTarget).transition()
           .duration(this.settings.transition_duration / 2)
