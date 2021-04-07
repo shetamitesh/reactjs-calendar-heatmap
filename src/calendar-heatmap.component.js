@@ -493,7 +493,7 @@ class CalendarHeatmap extends React.Component {
         return calcItemSize(d)
       })
       .attr('fill', d => {
-        return (d.total > 0) ? color(d.total) : 'rgb(143, 133, 243, 0.05)'//'transparent'
+        return (d.total > 0) ? color(d.total) : 'rgb(143, 133, 243, 0.2)'//'transparent'
       })
       .on('click', d => {
         if (this.in_transition) { return }
