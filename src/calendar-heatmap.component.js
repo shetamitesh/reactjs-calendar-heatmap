@@ -91,16 +91,16 @@ class CalendarHeatmap extends React.Component {
     this.svg.attr('width', this.settings.width)
       .attr('height', this.settings.height)
 
-    if ( !!this.props.data && !!this.props.data[0].summary ) {
+    if (!!this.props.data && !!this.props.data[0].summary) {
       this.drawChart()
     }
   }
 
   parseData() {
-    if ( !this.props.data ) { return }
+    if (!this.props.data) { return }
 
     // Get daily summary if that was not provided
-    if ( !this.props.data[0].summary ) {
+    if (!this.props.data[0].summary) {
       this.props.data.map(d => {
         let summary = d.details.reduce((uniques, project) => {
           if (!uniques[project.name]) {
@@ -127,15 +127,15 @@ class CalendarHeatmap extends React.Component {
   }
 
   drawChart() {
-    if ( this.overview === 'global' ) {
+    if (this.overview === 'global') {
       this.drawGlobalOverview()
-    } else if ( this.overview === 'year' ) {
+    } else if (this.overview === 'year') {
       this.drawYearOverview()
-    } else if ( this.overview === 'month' ) {
+    } else if (this.overview === 'month') {
       this.drawMonthOverview()
-    } else if ( this.overview === 'week' ) {
+    } else if (this.overview === 'week') {
       this.drawWeekOverview()
-    } else if ( this.overview === 'day' ) {
+    } else if (this.overview === 'day') {
       this.drawDayOverview()
     }
   }
@@ -287,14 +287,14 @@ class CalendarHeatmap extends React.Component {
         // Add summary to the tooltip
         if (d.summary.length <= 5) {
           let counter = 0
-          while ( counter < d.summary.length ) {
+          while (counter < d.summary.length) {
             tooltip_html += '<div><span><strong>' + d.summary[counter].name + '</strong></span>'
             tooltip_html += '<span>' + this.formatTime(d.summary[counter].value) + '</span></div>'
             counter++
           }
         } else {
           let counter = 0
-          while ( counter < 5 ) {
+          while (counter < 5) {
             tooltip_html += '<div><span><strong>' + d.summary[counter].name + '</strong></span>'
             tooltip_html += '<span>' + this.formatTime(d.summary[counter].value) + '</span></div>'
             counter++
@@ -304,7 +304,7 @@ class CalendarHeatmap extends React.Component {
 
           counter = 5
           let other_projects_sum = 0
-          while ( counter < d.summary.length ) {
+          while (counter < d.summary.length) {
             other_projects_sum = +d.summary[counter].value
             counter++
           }
@@ -347,8 +347,8 @@ class CalendarHeatmap extends React.Component {
         }
         let n = 0
         transition
-          .each(() => {++n })
-          .on('end', function() {
+          .each(() => { ++n })
+          .on('end', function () {
             if (!--n) {
               callback.apply(this, arguments)
             }
@@ -455,7 +455,7 @@ class CalendarHeatmap extends React.Component {
     }
 
     let calcItemSize = d => {
-      if ( max_value <= 0 ) {
+      if (max_value <= 0) {
         return this.settings.item_size
       }
       return this.settings.item_size * 0.75 + (this.settings.item_size * d.total / max_value) * 0.25
@@ -500,6 +500,22 @@ class CalendarHeatmap extends React.Component {
 
         // Set selected date to the one clicked on
         this.selected = d
+
+        d3.select(d3.event.currentTarget).transition()
+          .duration(this.settings.transition_duration / 2)
+          .ease(d3.easeLinear)
+          .attr('x', d => {
+            return calcItemX(d) + (this.settings.item_size - calcItemSize(d)) / 2
+          })
+          .attr('y', d => {
+            return calcItemY(d) + (this.settings.item_size - calcItemSize(d)) / 2
+          })
+          .attr('width', d => {
+            return calcItemSize(d)
+          })
+          .attr('height', d => {
+            return calcItemSize(d)
+          })
 
         // Hide tooltip
         this.hideTooltip()
@@ -560,7 +576,7 @@ class CalendarHeatmap extends React.Component {
 
         // Add summary to the tooltip
         let counter = 0
-        while ( counter < d.summary.length ) {
+        while (counter < d.summary.length) {
           tooltip_html += '<div><span><strong>' + d.summary[counter].name + '</strong></span>'
           tooltip_html += '<span>' + this.formatTime(d.summary[counter].value) + '</span></div>'
           counter++
@@ -621,7 +637,7 @@ class CalendarHeatmap extends React.Component {
         let n = 0
         transition
           .each(() => ++n)
-          .on('end', function() {
+          .on('end', function () {
             if (!--n) {
               callback.apply(this, arguments)
             }
@@ -854,14 +870,14 @@ class CalendarHeatmap extends React.Component {
       .append('rect')
       .attr('class', 'item item-block-rect')
       .style('cursor', 'pointer')
-      .attr('x', function(d) {
+      .attr('x', function (d) {
         let total = parseInt(d3.select(this.parentNode).attr('total'))
         let offset = parseInt(d3.select(this.parentNode).attr('offset'))
         itemScale.domain([0, total])
         d3.select(this.parentNode).attr('offset', offset + itemScale(d.value))
         return offset
       })
-      .attr('width', function(d) {
+      .attr('width', function (d) {
         let total = parseInt(d3.select(this.parentNode).attr('total'))
         itemScale.domain([0, total])
         return Math.max((itemScale(d.value) - item_gutter), 1)
@@ -925,7 +941,7 @@ class CalendarHeatmap extends React.Component {
         let n = 0
         transition
           .each(() => ++n)
-          .on('end', function() {
+          .on('end', function () {
             if (!--n) {
               callback.apply(this, arguments)
             }
@@ -1104,7 +1120,7 @@ class CalendarHeatmap extends React.Component {
       .attr('transform', d => {
         return 'translate(' + weekScale(moment(d.date).week()) + ',' + ((dayScale(moment(d.date).weekday()) + dayScale.bandwidth() / 1.75) - 15) + ')'
       })
-      .attr('total', d =>{
+      .attr('total', d => {
         return d.total
       })
       .attr('date', d => {
@@ -1144,14 +1160,14 @@ class CalendarHeatmap extends React.Component {
       .append('rect')
       .attr('class', 'item item-block-rect')
       .style('cursor', 'pointer')
-      .attr('x', function(d) {
+      .attr('x', function (d) {
         let total = parseInt(d3.select(this.parentNode).attr('total'))
         let offset = parseInt(d3.select(this.parentNode).attr('offset'))
         itemScale.domain([0, total])
         d3.select(this.parentNode).attr('offset', offset + itemScale(d.value))
         return offset
       })
-      .attr('width', function(d) {
+      .attr('width', function (d) {
         let total = parseInt(d3.select(this.parentNode).attr('total'))
         itemScale.domain([0, total])
         return Math.max((itemScale(d.value) - item_gutter), 1)
@@ -1217,7 +1233,7 @@ class CalendarHeatmap extends React.Component {
         let n = 0
         transition
           .each(() => ++n)
-          .on('end', function() {
+          .on('end', function () {
             if (!--n) {
               callback.apply(this, arguments)
             }
@@ -1411,7 +1427,7 @@ class CalendarHeatmap extends React.Component {
         let n = 0
         transition
           .each(() => ++n)
-          .on('end', function() {
+          .on('end', function () {
             if (!--n) {
               callback.apply(this, arguments)
             }
@@ -1492,7 +1508,7 @@ class CalendarHeatmap extends React.Component {
         return Math.floor(this.settings.label_padding / 3) + 'px'
       })
       .text(d => d)
-      .each(function() {
+      .each(function () {
         let obj = d3.select(this),
           text_length = obj.node().getComputedTextLength(),
           text = obj.text()
@@ -1722,7 +1738,7 @@ class CalendarHeatmap extends React.Component {
     return (
       <div id='calendar-heatmap'
         className={styles.calendarHeatmap}
-        ref={elem => {this.container = elem}}>
+        ref={elem => { this.container = elem }}>
       </div>
     )
   }

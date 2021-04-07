@@ -706,6 +706,16 @@ var CalendarHeatmap = function (_React$Component) {
         // Set selected date to the one clicked on
         _this3.selected = d;
 
+        d3.select(d3.event.currentTarget).transition().duration(_this3.settings.transition_duration / 2).ease(d3.easeLinear).attr('x', function (d) {
+          return calcItemX(d) + (_this3.settings.item_size - calcItemSize(d)) / 2;
+        }).attr('y', function (d) {
+          return calcItemY(d) + (_this3.settings.item_size - calcItemSize(d)) / 2;
+        }).attr('width', function (d) {
+          return calcItemSize(d);
+        }).attr('height', function (d) {
+          return calcItemSize(d);
+        });
+
         // Hide tooltip
         _this3.hideTooltip();
 
