@@ -653,7 +653,8 @@ class CalendarHeatmap extends React.Component {
 
     // Add month labels
     let month_labels = d3.timeMonths(start_of_year, end_of_year)
-    //console.log(month_labels);
+    console.log("========");
+    console.log(month_labels);
     let monthScale = d3.scaleLinear()
       .range([0, this.settings.width])
       .domain([0, month_labels.length])
