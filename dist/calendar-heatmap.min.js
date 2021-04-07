@@ -651,6 +651,8 @@ var CalendarHeatmap = function (_React$Component) {
 
       // Filter data down to the selected year
       var year_data = this.props.data.filter(function (d) {
+        console.log(start_of_year);
+        console.log(start_of_year <= (0, _moment2.default)(d.date) && (0, _moment2.default)(d.date) < end_of_year);
         return start_of_year <= (0, _moment2.default)(d.date) && (0, _moment2.default)(d.date) < end_of_year;
       });
 

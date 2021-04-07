@@ -436,6 +436,8 @@ class CalendarHeatmap extends React.Component {
 
     // Filter data down to the selected year
     let year_data = this.props.data.filter(d => {
+      console.log(start_of_year);
+      console.log(start_of_year <= moment(d.date) && moment(d.date) < end_of_year);
       return start_of_year <= moment(d.date) && moment(d.date) < end_of_year
     })
 
