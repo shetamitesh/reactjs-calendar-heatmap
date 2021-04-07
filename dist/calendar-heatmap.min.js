@@ -821,7 +821,7 @@ var CalendarHeatmap = function (_React$Component) {
       });
 
       // Add month labels
-      var month_labels = d3.timeMonths(start_of_year, end_of_year);
+      var month_labels = d3.timeMonths((0, _moment2.default)(start_of_year).clone().startOf('month').toDate(), end_of_year);
       console.log("========");
       console.log(month_labels);
       var monthScale = d3.scaleLinear().range([0, this.settings.width]).domain([0, month_labels.length]);
