@@ -695,7 +695,7 @@ var CalendarHeatmap = function (_React$Component) {
       }).attr('height', function (d) {
         return calcItemSize(d);
       }).attr('fill', function (d) {
-        return d.total > 0 ? color(d.total) : 'transparent';
+        return d.total > 0 ? color(d.total) : '#ff4500'; //'transparent'
       }).on('click', function (d) {
         if (_this3.in_transition) {
           return;
@@ -822,8 +822,8 @@ var CalendarHeatmap = function (_React$Component) {
 
       // Add month labels
       var month_labels = d3.timeMonths((0, _moment2.default)(start_of_year).clone().startOf('month').toDate(), end_of_year);
-      console.log("========");
-      console.log(month_labels);
+      // console.log("========");
+      // console.log(month_labels);
       var monthScale = d3.scaleLinear().range([0, this.settings.width]).domain([0, month_labels.length]);
       this.labels.selectAll('.label-month').remove();
       this.labels.selectAll('.label-month').data(month_labels).enter().append('text').attr('class', 'label label-month').style('cursor', 'pointer').style('fill', 'rgb(170, 170, 170)').attr('font-size', function () {
@@ -1024,7 +1024,7 @@ var CalendarHeatmap = function (_React$Component) {
 
         // Construct tooltip
         var tooltip_html = '';
-        tooltip_html += '<div class=".header"><strong>' + d.name + '</strong></div><br>';
+        tooltip_html += '<div class="' + _calendarHeatmap2.default.header + '"><strong>' + d.name + '</strong></div><br>';
         tooltip_html += '<div><strong>' + (d.value ? _this4.formatTime(d.value) : 'No trade') + ' found</strong></div>';
         tooltip_html += '<div>on ' + (0, _moment2.default)(date).format('dddd, MMM Do YYYY') + '</div>';
 

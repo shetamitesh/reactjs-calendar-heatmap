@@ -493,7 +493,7 @@ class CalendarHeatmap extends React.Component {
         return calcItemSize(d)
       })
       .attr('fill', d => {
-        return (d.total > 0) ? color(d.total) : 'transparent'
+        return (d.total > 0) ? color(d.total) : '#ff4500'//'transparent'
       })
       .on('click', d => {
         if (this.in_transition) { return }
@@ -653,8 +653,8 @@ class CalendarHeatmap extends React.Component {
 
     // Add month labels
     let month_labels = d3.timeMonths(moment(start_of_year).clone().startOf('month').toDate(), end_of_year)
-    console.log("========");
-    console.log(month_labels);
+    // console.log("========");
+    // console.log(month_labels);
     let monthScale = d3.scaleLinear()
       .range([0, this.settings.width])
       .domain([0, month_labels.length])
@@ -908,7 +908,7 @@ class CalendarHeatmap extends React.Component {
 
         // Construct tooltip
         let tooltip_html = ''
-        tooltip_html += `<div class=".header"><strong>${d.name}</strong></div><br>`
+        tooltip_html += `<div class="${styles.header}"><strong>${d.name}</strong></div><br>`
         tooltip_html += '<div><strong>' + (d.value ? this.formatTime(d.value) : 'No trade') + ' found</strong></div>'
         tooltip_html += '<div>on ' + moment(date).format('dddd, MMM Do YYYY') + '</div>'
 
