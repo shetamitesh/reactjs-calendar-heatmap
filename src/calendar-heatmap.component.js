@@ -436,8 +436,8 @@ class CalendarHeatmap extends React.Component {
 
     // Filter data down to the selected year
     let year_data = this.props.data.filter(d => {
-      console.log(start_of_year);
-      console.log(start_of_year <= moment(d.date) && moment(d.date) < end_of_year);
+      //console.log(start_of_year);
+      //console.log(start_of_year <= moment(d.date) && moment(d.date) < end_of_year);
       return start_of_year <= moment(d.date) && moment(d.date) < end_of_year
     })
 
@@ -653,7 +653,7 @@ class CalendarHeatmap extends React.Component {
 
     // Add month labels
     let month_labels = d3.timeMonths(start_of_year, end_of_year)
-    console.log(month_labels);
+    //console.log(month_labels);
     let monthScale = d3.scaleLinear()
       .range([0, this.settings.width])
       .domain([0, month_labels.length])
@@ -772,7 +772,7 @@ class CalendarHeatmap extends React.Component {
       })
 
     // Add button to switch back to previous overview
-    this.drawButton()
+    //this.drawButton()
   }
 
 

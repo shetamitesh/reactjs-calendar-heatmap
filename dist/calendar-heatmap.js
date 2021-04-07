@@ -651,8 +651,8 @@ var CalendarHeatmap = function (_React$Component) {
 
       // Filter data down to the selected year
       var year_data = this.props.data.filter(function (d) {
-        console.log(start_of_year);
-        console.log(start_of_year <= (0, _moment2.default)(d.date) && (0, _moment2.default)(d.date) < end_of_year);
+        //console.log(start_of_year);
+        //console.log(start_of_year <= moment(d.date) && moment(d.date) < end_of_year);
         return start_of_year <= (0, _moment2.default)(d.date) && (0, _moment2.default)(d.date) < end_of_year;
       });
 
@@ -822,7 +822,7 @@ var CalendarHeatmap = function (_React$Component) {
 
       // Add month labels
       var month_labels = d3.timeMonths(start_of_year, end_of_year);
-      console.log(month_labels);
+      //console.log(month_labels);
       var monthScale = d3.scaleLinear().range([0, this.settings.width]).domain([0, month_labels.length]);
       this.labels.selectAll('.label-month').remove();
       this.labels.selectAll('.label-month').data(month_labels).enter().append('text').attr('class', 'label label-month').style('cursor', 'pointer').style('fill', 'rgb(170, 170, 170)').attr('font-size', function () {
@@ -907,7 +907,7 @@ var CalendarHeatmap = function (_React$Component) {
       });
 
       // Add button to switch back to previous overview
-      this.drawButton();
+      //this.drawButton()
     }
 
     /**
