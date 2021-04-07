@@ -695,7 +695,7 @@ var CalendarHeatmap = function (_React$Component) {
       }).attr('height', function (d) {
         return calcItemSize(d);
       }).attr('fill', function (d) {
-        return d.total > 0 ? color(d.total) : '#ff4500'; //'transparent'
+        return d.total > 0 ? color(d.total) : 'rgb(143, 133, 243, 0.05)'; //'transparent'
       }).on('click', function (d) {
         if (_this3.in_transition) {
           return;
