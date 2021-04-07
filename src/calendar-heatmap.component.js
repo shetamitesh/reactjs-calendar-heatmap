@@ -504,7 +504,7 @@ class CalendarHeatmap extends React.Component {
         // Hide tooltip
         this.hideTooltip()
 
-        this.drawChart()
+        //this.drawChart()
 
         if (!!this.props.handler && typeof this.props.handler == 'function') {
           this.props.handler(d)

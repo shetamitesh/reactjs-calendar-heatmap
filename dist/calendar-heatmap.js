@@ -709,7 +709,7 @@ var CalendarHeatmap = function (_React$Component) {
         // Hide tooltip
         _this3.hideTooltip();
 
-        _this3.drawChart();
+        //this.drawChart()
 
         if (!!_this3.props.handler && typeof _this3.props.handler == 'function') {
           _this3.props.handler(d);
