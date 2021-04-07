@@ -709,12 +709,18 @@ var CalendarHeatmap = function (_React$Component) {
         // Hide tooltip
         _this3.hideTooltip();
 
+        _this3.drawChart();
+
+        if (!!_this3.props.handler && typeof _this3.props.handler == 'function') {
+          _this3.props.handler(d);
+        }
+
         // Remove all year overview related items and labels
-        _this3.removeYearOverview();
+        //this.removeYearOverview()
 
         // Redraw the chart
-        _this3.overview = 'day';
-        _this3.drawChart();
+        //this.overview = 'day'
+        //this.drawChart()
       }).on('mouseover', function (d) {
         if (_this3.in_transition) {
           return;
