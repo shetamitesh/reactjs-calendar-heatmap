@@ -701,7 +701,7 @@ var CalendarHeatmap = function (_React$Component) {
           return;
         }
 
-        _this3.in_transition = true;
+        //this.in_transition = true
 
         // Set selected date to the one clicked on
         _this3.selected = d;

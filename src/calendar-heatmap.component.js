@@ -496,7 +496,7 @@ class CalendarHeatmap extends React.Component {
         // Don't transition if there is no data to show
         if (d.total === 0) { return }
 
-        this.in_transition = true
+        //this.in_transition = true
 
         // Set selected date to the one clicked on
         this.selected = d
