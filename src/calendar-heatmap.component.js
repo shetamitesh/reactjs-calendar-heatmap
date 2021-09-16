@@ -541,6 +541,7 @@ class CalendarHeatmap extends React.Component {
       .on('mouseover', d => {
         if (this.in_transition) { return }
 
+        console.log(d3.event);
         // Pulsating animation
         let circle = d3.select(d3.event.currentTarget)
         let repeat = () => {
