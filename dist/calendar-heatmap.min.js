@@ -741,6 +741,7 @@ var CalendarHeatmap = function (_React$Component) {
           return;
         }
 
+        console.log(d3.event);
         // Pulsating animation
         var circle = d3.select(d3.event.currentTarget);
         var repeat = function repeat() {
